@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Course;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +30,13 @@ Route::get('/contact', function () {
 Route::get('/profile', function () {
     return view('frontend.profile');
 })->name('profile');
-Route::get('/courses', function () {
-    return view('frontend.courses');
-})->name('courses');
 
-Route::get('/dashboard', function () {
+Route::get('/courses', [CourseController::class, 'index'])->name('courses');
+Route::get('/courses/{slug}', [CourseController::class, 'show']);
+
+
+// Dashboard
+Route::get('/dashboard', function ($slug) {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
