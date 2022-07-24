@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Course;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,7 @@ use App\Http\Controllers\CourseController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/home', function () {
     return view('frontend.home');
@@ -32,7 +31,7 @@ Route::get('/profile', function () {
 })->name('profile');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses');
-Route::get('/courses/{slug}', [CourseController::class, 'show']);
+Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
 
 // Dashboard
