@@ -1068,6 +1068,9 @@ section.apply-now .item h3 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+section.apply-now .item h3.title:hover{
+  color:#f5a425;
+}
 
 section.apply-now .item p {
   color: #fff;
@@ -1682,9 +1685,15 @@ section.meetings-page .pagination ul li a:hover {
   font-size: 22px;
   margin-top: 7px;
 }
-
+.meeting-single-item .down-content a h3.category{
+  font-size: 20px;
+  color:#666;
+}
+.meeting-single-item .down-content a h3.category:hover{
+  color:#f5a425;
+}
 .meeting-single-item .down-content h4 {
-  font-size: 22px;
+  font-size: 28px;
   color: #1f272b;
   font-weight: 600;
   display: inline-block;

@@ -20,8 +20,12 @@
                     <a><img src="{{ asset('assets/images/' . $course->img) }}" alt="" height="400px"></a>
                   </div>
                   <div class="down-content">
-                    <a><h4>{{ $course->title }}</h4></a>
-                    <p>Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-008, Brazil</p>
+                    <a>
+                      <h4>{{ $course->title }}</h4>
+                    </a>
+                    <a href="/categories/{{ $course->category->slug }}">
+                      <h3 class="category">in : {{ $course->category->name }}</h3>
+                    </a>
                     <p class="description">{{ $course->body }} </p>
                     {{-- <div class="row">
                       <div class="col-lg-4">

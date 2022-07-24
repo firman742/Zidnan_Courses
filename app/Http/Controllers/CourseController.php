@@ -9,7 +9,7 @@ use App\Models\Course;
 class CourseController extends Controller
 {
     public function index(){
-        return view('frontend.courses', [
+        return view('frontend.course.courses', [
             "title" => "Courses",
             "courses" => Course::all()
     
@@ -17,7 +17,7 @@ class CourseController extends Controller
     }
 
     public function show(Course $course){
-        return view('frontend.course', [
+        return view('frontend.course.index', [
             "course" => $course
         ]);
     }

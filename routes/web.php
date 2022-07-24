@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,21 @@ Route::get('/profile', function () {
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses');
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
+
+Route::get('/categories', function(Category $category){
+    return view('frontend.course.categories', [
+        'title' => $category->name,
+        'categories' => Category::all()
+    ]);
+});
+Route::get('/categories/{category:slug}', function(Category $category){
+    return view('frontend.course.category', [
+        'title' => $category->name,
+        'course' => $category->course,
+        'category' => $category->name
+    ]);
+});
+
 
 
 // Dashboard

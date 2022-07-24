@@ -90,7 +90,7 @@
             <div class="meeting-item">
               <div class="thumb">
                 <div class="price">
-                  <span>{{ $c->value }}</span>
+                  <span>Rp.{{ $c->value }}/bulan</span>
                 </div>
                 <a href="/courses/{{ $c->slug }}"><img src="assets/images/{{ $c->img }}" alt="New Lecturer Meeting"></a>
               </div>
