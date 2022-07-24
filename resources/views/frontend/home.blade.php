@@ -101,6 +101,11 @@
             </div>
           </div>
           @endforeach
+          <div class="col-lg-12 text-center">
+            <div class="main-button-red">
+              <a href="/courses">Back To Courses</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

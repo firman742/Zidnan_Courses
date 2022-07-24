@@ -17,7 +17,7 @@
                     @foreach($categories as $category)
                       <div class="col-lg-12">
                         <div class="item">
-                          <a href="/categories/{{ $category->slug }}">
+                          <a href="/course/categories/{{ $category->slug }}">
                             <h3 class="title">{{ $category->name }}</h3>
                           </a>
                           <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>

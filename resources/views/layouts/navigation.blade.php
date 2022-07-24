@@ -130,6 +130,7 @@
                           <li><a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
                           <li><a href="/profile" class="{{ request()->is('profile') ? 'active' : '' }}">Profile</a></li>
                           <li><a href="/courses" class="{{ request()->is('courses') ? 'active' : '' }}">Courses</a></li>
+                          <li><a href="/posts" class="{{ request()->is('posts') ? 'active' : '' }}">Info</a></li>
                           <li><a href="{{ route('contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact Us</a></li> 
                       </ul>        
                       <a class='menu-trigger'>

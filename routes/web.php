@@ -24,6 +24,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //     ]);
 // })->name('home');
 
+Route::get('/posts', function () {
+    return view('frontend.post.index');
+})->name('posts');
+
 Route::get('/contact', function () {
     return view('frontend.contact');
 })->name('contact');
@@ -35,13 +39,13 @@ Route::get('/profile', function () {
 Route::get('/courses', [CourseController::class, 'index'])->name('courses');
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
-Route::get('/categories', function(Category $category){
+Route::get('/course/categories', function(Category $category){
     return view('frontend.course.categories', [
         'title' => $category->name,
         'categories' => Category::all()
     ]);
 });
-Route::get('/categories/{category:slug}', function(Category $category){
+Route::get('/course/categories/{category:slug}', function(Category $category){
     return view('frontend.course.category', [
         'title' => $category->name,
         'course' => $category->course,

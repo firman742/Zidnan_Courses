@@ -23,7 +23,7 @@
                     <a>
                       <h4>{{ $course->title }}</h4>
                     </a>
-                    <a href="/categories/{{ $course->category->slug }}">
+                    <a href="/course/categories/{{ $course->category->slug }}">
                       <h3 class="category">in : {{ $course->category->name }}</h3>
                     </a>
                     <p class="description">{{ $course->body }} </p>

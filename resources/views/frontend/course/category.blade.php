@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-lg-12 text-center mt-5">
                     <span class="main-button-red">
-                        <a href="/categories">All Categories</a>
+                        <a href="/course/categories">All Categories</a>
                     </span>
                 </div>
                 {{-- <div class="col-lg-12">
