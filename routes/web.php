@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Course;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 
@@ -18,9 +17,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home', function () {
-    return view('frontend.home');
-})->name('home');
+// Route::get('/home', function () {
+//     return view('frontend.home',[
+//         'course' => App\Models\Course::all()
+//     ]);
+// })->name('home');
 
 Route::get('/contact', function () {
     return view('frontend.contact');

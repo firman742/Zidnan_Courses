@@ -29,6 +29,7 @@
     <!-- ***** Main Banner Area End ***** -->
   </x-slot>
   <!-- ***** Header End ***** -->
+  
 
   <!-- ***** Kelebihan Start ***** -->
   <section class="services">
@@ -84,76 +85,22 @@
           </div>
         </div>
         <div class="row justify-content-center">
+          @foreach($course as $c)
           <div class="col-lg-4">
             <div class="meeting-item">
               <div class="thumb">
                 <div class="price">
-                  <span>$22.00</span>
+                  <span>{{ $c->value }}</span>
                 </div>
-                <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
+                <a href="/courses/{{ $c->slug }}"><img src="assets/images/{{ $c->img }}" alt="New Lecturer Meeting"></a>
               </div>
               <div class="down-content">
-                <a href="meeting-details.html"><h4>Tahsin Tahfidz</h4></a>
+                <a href="/courses/{{ $c->slug }}"><h4>{{ $c->title }}</h4></a>
                 <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="meeting-item">
-              <div class="thumb">
-                <div class="price">
-                  <span>$36.00</span>
-                </div>
-                <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt="Online Teaching"></a>
-              </div>
-              <div class="down-content">
-                <a href="meeting-details.html"><h4>Bahasa Arab</h4></a>
-                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="meeting-item">
-              <div class="thumb">
-                <div class="price">
-                  <span>$14.00</span>
-                </div>
-                <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt="Higher Education"></a>
-              </div>
-              <div class="down-content">
-                <a href="meeting-details.html"><h4>Bahasa Inggris</h4></a>
-                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="meeting-item">
-              <div class="thumb">
-                <div class="price">
-                  <span>$48.00</span>
-                </div>
-                <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
-              </div>
-              <div class="down-content">
-                <a href="meeting-details.html"><h4>Mapel Umum / Tematik</h4></a>
-                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="meeting-item">
-              <div class="thumb">
-                <div class="price">
-                  <span>$48.00</span>
-                </div>
-                <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
-              </div>
-              <div class="down-content">
-                <a href="meeting-details.html"><h4>Calistung</h4></a>
-                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
@@ -171,7 +118,7 @@
                 <h3>Private Learning</h3>
                 <p>kamu bisa mengatur Pengajar bisa datang ke rumahmu</p>
                 <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                  <a href="/contact">Join Us Now!</a>
               </div>
               </div>
             </div>
@@ -180,7 +127,7 @@
                 <h3>Les Private</h3>
                 <p>kamu bisa memilih belajar di markaz kami</p>
                 <div class="main-button-yellow">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                  <a href="/contact">Join Us Now!</a>
               </div>
               </div>
             </div>

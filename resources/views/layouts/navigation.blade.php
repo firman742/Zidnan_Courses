@@ -121,13 +121,13 @@
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="/home" class="logo">
+                      <a href="/" class="logo">
                         Zidnan Course
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li><a href="/home" class="{{ request()->is('home') ? 'active' : '' }}">Home</a></li>
+                          <li><a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
                           <li><a href="/profile" class="{{ request()->is('profile') ? 'active' : '' }}">Profile</a></li>
                           <li><a href="/courses" class="{{ request()->is('courses') ? 'active' : '' }}">Courses</a></li>
                           <li><a href="{{ route('contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact Us</a></li> 

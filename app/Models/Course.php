@@ -13,3 +13,5 @@ class Course extends Model
 
     protected $guarded = ['id'];
 }
+
+
